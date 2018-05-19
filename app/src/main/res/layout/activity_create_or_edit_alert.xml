@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".CreateOrEditAlert">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tool_bar"
+        android:orientation="vertical"
+        android:padding="@dimen/default_half_padding">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="bottom">
+
+            <EditText
+                android:id="@+id/alert_title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/title_height"
+                android:layout_gravity="top"
+                android:background="@drawable/edit_text_focused_bg_blue"
+                android:gravity="start"
+                android:hint="@string/title_hint"
+                android:inputType="textPersonName"
+                android:padding="@dimen/default_full_padding" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_marginTop="10dp"
+            android:gravity="bottom">
+
+            <EditText
+                android:id="@+id/alert_content"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:background="@drawable/edit_text_focused_bg_blue"
+                android:gravity="start"
+                android:hint="@string/reminder_hint"
+                android:inputType="textMultiLine"
+                android:padding="@dimen/default_full_padding" />
+        </android.support.design.widget.TextInputLayout>
+
+        <ListView
+            android:id="@+id/alert_settings"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+</RelativeLayout>
